@@ -12,6 +12,7 @@ import {
   Shield,
   ArrowRight
 } from 'lucide-react'
+import Logo from '../assets/Logo-w.png'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -47,8 +48,7 @@ const Footer = () => {
             {/* Company Info */}
             <div className="lg:col-span-1">
               <div className="flex items-center mb-4">
-                <Leaf className="h-8 w-8 text-green-500 mr-2" />
-                <span className="font-bold text-xl">Shanmukh Artificial Grass</span>
+                <img src={Logo} alt="" className='w-[200px]' />
               </div>
               <p className="text-gray-400 mb-6 text-sm leading-relaxed">
                 Transform your outdoor spaces with premium artificial grass and effective bird control solutions. 
@@ -168,7 +168,7 @@ const Footer = () => {
       </div>
 
       {/* Service Areas */}
-      <div className="border-t border-gray-800 py-8">
+      {/* <div className="border-t border-gray-800 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4">
             <h4 className="text-lg font-semibold mb-4">Service Areas</h4>
@@ -184,7 +184,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Bottom Footer */}
       <div className="border-t border-gray-800 py-6">
@@ -211,7 +211,7 @@ const Footer = () => {
       </div>
 
       {/* Emergency Contact Bar */}
-      <div className="bg-red-600 py-3">
+      {/* <div className="bg-red-600 py-3">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <span className="text-white font-semibold text-sm">
@@ -225,7 +225,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
+      </div> */}
     </footer>
   )
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Leaf, Shield } from 'lucide-react'
+import Logo from '../assets/Logo.png'
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,13 +24,12 @@ const Navbar = () => {
   const isActive = (href) => location.pathname === href
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+    <nav className="bg-white shadow-lg sticky top-0 z-50 h-[90px]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[100%]">
+        <div className="flex justify-between h-[100%]">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center">
-              <Leaf className="h-8 w-8 text-green-600 mr-2" />
-              <span className="font-bold text-xl text-gray-900">Shanmukh Artificial Grass</span>
+              <img src={Logo} alt="" className='w-[200px]' />
             </Link>
           </div>
           
