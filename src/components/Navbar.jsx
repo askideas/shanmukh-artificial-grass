@@ -94,53 +94,87 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* Mobile Navigation - Slide-in Drawer */}
       {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-            {navigation.map((item) => (
-              <div key={item.name}>
-                {item.submenu ? (
-                  <div>
-                    <div className="text-gray-700 px-3 py-2 text-base font-medium">
-                      {item.name}
-                    </div>
-                    {item.submenu.map((subitem) => (
+        <>
+          {/* Backdrop Overlay */}
+          <div 
+            className="fixed inset-0 z-40 md:hidden transition-opacity duration-300"
+            style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+            onClick={() => setIsOpen(false)}
+          ></div>
+          
+          {/* Slide-in Menu */}
+          <div 
+            className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 md:hidden transition-transform duration-300 ease-in-out"
+            style={{ transform: isOpen ? 'translateX(0)' : 'translateX(100%)' }}
+          >
+            {/* Menu Header */}
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <div className="flex items-center">
+                <Leaf className="h-6 w-6 text-green-600 mr-2" />
+                <span className="font-bold text-lg text-gray-900">Menu</span>
+              </div>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-gray-700 hover:text-green-600 focus:outline-none cursor-pointer"
+              >
+                <X className="h-6 w-6" />
+              </button>
+            </div>
+
+            {/* Menu Items */}
+            <div className="overflow-y-auto h-[calc(100%-80px)] p-4">
+              <div className="space-y-2">
+                {navigation.map((item) => (
+                  <div key={item.name}>
+                    {item.submenu ? (
+                      <div className="mb-2">
+                        <div className="text-gray-700 px-3 py-3 text-base font-semibold border-b border-gray-100">
+                          {item.name}
+                        </div>
+                        <div className="pl-4 mt-2 space-y-1">
+                          {item.submenu.map((subitem) => (
+                            <Link
+                              key={subitem.name}
+                              to={subitem.href}
+                              className="flex items-center text-gray-600 px-3 py-3 text-sm hover:text-green-600 hover:bg-green-50 rounded-md cursor-pointer transition-colors duration-200"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              <subitem.icon className="h-5 w-5 mr-3" />
+                              {subitem.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
                       <Link
-                        key={subitem.name}
-                        to={subitem.href}
-                        className="flex items-center text-gray-600 px-6 py-2 text-sm hover:text-green-600 hover:bg-green-50 cursor-pointer"
+                        to={item.href}
+                        className={`block px-3 py-3 text-base font-medium rounded-md cursor-pointer transition-colors duration-200 ${
+                          isActive(item.href)
+                            ? 'text-green-600 bg-green-50'
+                            : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
+                        }`}
                         onClick={() => setIsOpen(false)}
                       >
-                        <subitem.icon className="h-4 w-4 mr-3" />
-                        {subitem.name}
+                        {item.name}
                       </Link>
-                    ))}
+                    )}
                   </div>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={`block px-3 py-2 text-base font-medium rounded-md cursor-pointer ${
-                      isActive(item.href)
-                        ? 'text-green-600 bg-green-50'
-                        : 'text-gray-700 hover:text-green-600 hover:bg-gray-50'
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                )}
+                ))}
+                
+                {/* Get Quote Button */}
+                <Link
+                  to="/contact"
+                  className="block bg-green-600 text-white px-4 py-3 rounded-lg text-base font-semibold hover:bg-green-700 mt-6 cursor-pointer transition-colors duration-200 text-center"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Get Quote
+                </Link>
               </div>
-            ))}
-            <Link
-              to="/contact"
-              className="block bg-green-600 text-white px-3 py-2 rounded-md text-base font-medium hover:bg-green-700 mt-4 cursor-pointer"
-              onClick={() => setIsOpen(false)}
-            >
-              Get Quote
-            </Link>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </nav>
   )
