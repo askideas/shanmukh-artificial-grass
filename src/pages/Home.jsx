@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { ArrowRight, Star, Users, Award, CheckCircle, Leaf, Shield, Phone, ChevronLeft, ChevronRight, Droplets, Clock, Sun, Heart } from 'lucide-react'
+import { ArrowRight, Star, Users, Award, CheckCircle, Leaf, Shield, Phone, ChevronLeft, ChevronRight, Droplets, Clock, Sun, Heart, Home as HomeIcon, Building, Sparkles, TreePine } from 'lucide-react'
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -28,22 +28,22 @@ const Home = () => {
 
   const grassTypes = [
     {
-      name: 'Premium Landscape',
-      height: '35-40mm',
+      name: '25-35mm Grass',
+      height: '25-35mm',
       image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
-      features: ['Ultra realistic', 'Soft texture', 'UV resistant']
+      features: ['3-tone color', 'Monofilament fiber', 'Single & double layer']
     },
     {
-      name: 'Sports Grade',
-      height: '20-25mm',
+      name: '40mm Premium Grass',
+      height: '40mm',
       image: 'https://images.unsplash.com/photo-1574090424863-0dda9e448184?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
-      features: ['High durability', 'Excellent drainage', 'Anti-slip backing']
+      features: ['Double layer backing', 'High durability', 'Luxury installations']
     },
     {
-      name: 'Economy Grade',
-      height: '20-30mm',
+      name: '50mm Luxury Grass',
+      height: '50mm',
       image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
-      features: ['Cost-effective', 'Good appearance', 'Easy maintenance']
+      features: ['Premium quality', 'FIFA-standard feel', 'Sports & landscapes']
     }
   ]
 
@@ -98,24 +98,31 @@ const Home = () => {
   const testimonials = [
     {
       name: 'Rajesh Kumar',
-      location: 'Hyderabad',
-      text: 'Excellent service! The artificial grass looks amazing and the installation was professional. Highly recommend Shanmukh Artificial Grass for quality work.',
+      location: 'Nellore',
+      text: 'Excellent service! The artificial grass looks amazing and the installation was professional. Shanmukh team completed the work on time with great quality.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMJA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80'
     },
     {
       name: 'Priya Sharma',
-      location: 'Secunderabad',
-      text: 'Bird spikes installation was quick and effective. No more bird problems on our terrace. Great customer service and professional approach.',
+      location: 'BV Nagar, Nellore',
+      text: 'PROTECH bird spikes installation was quick and effective. No more bird problems on our terrace. Great customer service and professional approach.',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1494790108755-2616b612b647?ixlib=rb-4.0.3&ixid=M3wxMJA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80'
     },
     {
       name: 'Amit Patel',
-      location: 'Gachibowli',
-      text: 'Transformed our backyard completely! The artificial grass looks so natural that guests can\'t tell the difference. Worth every penny.',
+      location: 'Mini Bypass, Nellore',
+      text: 'Transformed our backyard completely! The artificial grass looks so natural and feels soft. The 50mm premium grass was worth every penny. Highly recommended!',
       rating: 5,
       image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMJA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80'
+    },
+    {
+      name: 'Lakshmi Reddy',
+      location: 'Nellore',
+      text: 'Best decision for our garden! No more watering or maintenance headaches. The grass stays green year-round. Professional installation and friendly service.',
+      rating: 5,
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMJA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80'
     }
   ]
 
@@ -367,6 +374,154 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Our Services Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Our Professional Services
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive solutions for all your artificial grass and bird control needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Artificial Grass Service */}
+            <div className="bg-gradient-to-br from-green-50 to-white border-2 border-green-200 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-4">
+                <div className="bg-green-600 p-3 rounded-lg mr-4">
+                  <Leaf className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Artificial Grass</h3>
+              </div>
+              <p className="text-gray-700 mb-6">
+                Premium G GRASS artificial grass mats in various pile heights (25mm to 50mm). 
+                Perfect for residential lawns, commercial landscapes, sports areas, and decorative installations.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">3-tone realistic color for natural look</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">UV-resistant & weather-proof</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Drainage system to prevent waterlogging</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Pet & child-friendly, chemical-free</span>
+                </div>
+              </div>
+              <Link
+                to="/artificial-grass"
+                className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 cursor-pointer"
+              >
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+
+            {/* Bird Spikes Service */}
+            <div className="bg-gradient-to-br from-blue-50 to-white border-2 border-blue-200 rounded-xl p-8 hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center mb-4">
+                <div className="bg-blue-600 p-3 rounded-lg mr-4">
+                  <Shield className="h-8 w-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900">Bird Spikes</h3>
+              </div>
+              <p className="text-gray-700 mb-6">
+                PROTECH Shield bird spike systems for effective and humane bird control. 
+                Available in polycarbonate (C1001) and stainless steel (C1002) variants for long-lasting protection.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Humane & invisible protection</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Weather-resistant materials</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Low maintenance & durable</span>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                  <span className="text-gray-700 text-sm">Easy installation methods</span>
+                </div>
+              </div>
+              <Link
+                to="/bird-spikes"
+                className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 cursor-pointer"
+              >
+                Learn More
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Applications Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Perfect for Every Application
+            </h2>
+            <p className="text-lg text-gray-600">
+              Versatile solutions for residential, commercial, and sports installations
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {[
+              { icon: HomeIcon, title: 'Residential Lawns' },
+              { icon: Building, title: 'Balconies & Terraces' },
+              { icon: Users, title: 'Playgrounds' },
+              { icon: Sparkles, title: 'Events' },
+              { icon: Heart, title: 'Pet Areas' },
+              { icon: TreePine, title: 'Landscapes' }
+            ].map((app, index) => (
+              <div key={index} className="bg-white p-4 rounded-xl text-center hover:shadow-md transition-shadow duration-300">
+                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <app.icon className="h-6 w-6 text-green-600" />
+                </div>
+                <h4 className="text-sm font-semibold text-gray-900">{app.title}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              { number: '500+', label: 'Projects Completed', icon: Award },
+              { number: '50+', label: 'Happy Clients', icon: Users },
+              { number: '5+', label: 'Years Experience', icon: Clock },
+              { number: '100%', label: 'Satisfaction Rate', icon: Star }
+            ].map((stat, index) => (
+              <div key={index} className="text-center bg-gray-50 p-6 rounded-xl">
+                <div className="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <stat.icon className="h-6 w-6 text-green-600" />
+                </div>
+                <div className="text-3xl font-bold text-green-600 mb-2">{stat.number}</div>
+                <div className="text-gray-700 text-sm font-medium">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Ready to Transform Your Space */}
       <section className="py-12 bg-gradient-to-r from-green-600 to-green-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -385,13 +540,13 @@ const Home = () => {
               <Phone className="mr-2 h-4 w-4" />
               Contact Us Now
             </Link>
-            <Link
-              to="/artificial-grass"
+            <a
+              href="tel:+919441655656"
               className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors duration-200 flex items-center justify-center cursor-pointer"
             >
-              <Leaf className="mr-2 h-4 w-4" />
-              View Services
-            </Link>
+              <Phone className="mr-2 h-4 w-4" />
+              Call: +91 9441 655 656
+            </a>
           </div>
         </div>
       </section>
