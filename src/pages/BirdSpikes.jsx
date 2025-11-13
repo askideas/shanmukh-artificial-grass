@@ -4,313 +4,269 @@ import {
   Shield, 
   CheckCircle, 
   ArrowRight, 
-  Bird, 
-  Home, 
-  Building, 
+  Phone, 
+  Mail,
+  MapPin,
+  Download,
+  Star,
   Clock,
-  Zap,
   Heart,
   Award,
-  Phone,
-  AlertTriangle,
-  Wind,
-  Sun
+  Zap,
+  Home,
+  Building,
+  Factory,
+  ChevronRight
 } from 'lucide-react'
 
 const BirdSpikes = () => {
-  const problems = [
+  const productTypes = [
     {
-      icon: Home,
-      title: 'Property Damage',
-      description: 'Bird droppings cause staining, corrosion, and structural damage to buildings and vehicles.'
+      model: 'C1001',
+      name: 'Polycarbonate Bird Spikes',
+      material: 'UV-stabilized virgin polycarbonate',
+      appearance: 'Transparent / virtually invisible on surfaces',
+      durability: 'Weather resistant, UV stabilized and maintenance free',
+      design: 'Flexible base with glue channels for strong adhesion on uneven surfaces',
+      installation: 'Glue, screws, nails or cable ties — quick and neat',
+      use: 'Ideal for windowsills, parapets, signboards, beams and ledges where aesthetics matter',
+      benefits: ['Humane', 'Unobtrusive', 'Long lasting', 'Non-corroding'],
+      image: 'https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      color: 'blue'
     },
     {
-      icon: AlertTriangle,
-      title: 'Health Hazards',
-      description: 'Bird droppings carry diseases and create unsanitary conditions around your property.'
-    },
-    {
-      icon: Building,
-      title: 'Nesting Issues',
-      description: 'Birds build nests in gutters, vents, and roof areas causing blockages and damage.'
-    },
-    {
-      icon: Wind,
-      title: 'Noise Pollution',
-      description: 'Large flocks create noise disturbances, especially during early morning hours.'
+      model: 'C1002',
+      name: 'Stainless Steel Bird Spikes',
+      material: 'Stainless steel (robust and corrosion resistant)',
+      appearance: 'Metallic profile — strong deterrent for larger birds',
+      durability: 'Built for heavy duty, exposed, industrial environments',
+      design: 'Industrial-grade construction for maximum effectiveness',
+      installation: 'Screws or adhesive as appropriate (suitable for industrial & commercial use)',
+      use: 'Rooftops, warehouses, chimneys, pipelines, and heavy-use outdoor structures',
+      benefits: ['Robust', 'Vandal-resistant', 'Heavy-duty', 'Industrial grade'],
+      image: 'https://images.unsplash.com/photo-1581092787765-e45d8b34bed0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      color: 'green'
     }
+  ]
+
+  const specifications = [
+    { label: 'Spike Diameter', value: '1.5 mm' },
+    { label: 'Spike Length', value: '32.5 cm' },
+    { label: 'Base Type', value: 'Flexible with glue channels' },
+    { label: 'Coverage', value: 'Modular strips for long ledges' }
   ]
 
   const benefits = [
     {
       icon: Heart,
-      title: 'Humane Solution',
-      description: 'Effectively deters birds without causing harm - completely safe and ethical approach.'
-    },
-    {
-      icon: Shield,
-      title: '100% Effective',
-      description: 'Proven track record of preventing bird landing and nesting on treated areas.'
-    },
-    {
-      icon: Sun,
-      title: 'Weather Resistant',
-      description: 'UV stabilized materials that withstand extreme weather conditions for years.'
+      title: 'Humane Bird Deterrent',
+      description: 'Prevents landing — does not injure birds'
     },
     {
       icon: Clock,
-      title: 'Long Lasting',
-      description: 'Durable construction provides 10+ years of effective bird deterrent protection.'
+      title: 'Low Maintenance',
+      description: 'Long service life with minimal upkeep required'
     },
     {
-      icon: Zap,
-      title: 'Quick Installation',
-      description: 'Professional installation completed in hours, not days, with minimal disruption.'
+      icon: Shield,
+      title: 'Weather Resistant',
+      description: 'UV and weather resistant (polycarbonate variety)'
     },
     {
       icon: Award,
-      title: 'Virtually Invisible',
-      description: 'Discreet design maintains the aesthetic appeal of your property.'
+      title: 'Corrosion Resistant',
+      description: 'Tough and corrosion resistant (stainless steel variety)'
+    },
+    {
+      icon: Zap,
+      title: 'Improves Hygiene',
+      description: 'Reduces cleaning/repair costs from bird droppings'
+    },
+    {
+      icon: CheckCircle,
+      title: 'Flexible Installation',
+      description: 'Easy installation on curved and uneven surfaces'
     }
   ]
 
   const applications = [
+    'Windowsills & ledges',
+    'Parapets, rooftops, eaves & tiles',
+    'Signboards & billboards',
+    'Pipes, chimneys & ducts',
+    'Balconies, awnings & beams',
+    'Warehouses, showrooms & factories'
+  ]
+
+  const installationMethods = [
     {
-      category: 'Residential Properties',
-      locations: [
-        'Roof ridges and edges',
-        'Window sills and ledges',
-        'Balcony railings',
-        'Air conditioning units',
-        'Satellite dishes',
-        'Garden structures'
-      ],
-      image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'
+      title: 'Adhesive/Glue',
+      description: 'Use silicone or structural adhesive into the glue channel on the base.',
+      icon: '🔗'
     },
     {
-      category: 'Commercial Buildings',
-      locations: [
-        'Office building ledges',
-        'Hotel and restaurant areas',
-        'Shopping mall structures',
-        'Hospital exteriors',
-        'School buildings',
-        'Warehouse roofing'
-      ],
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'
+      title: 'Mechanical Fixings',
+      description: 'Screws or nails for permanent installations (recommended on hard surfaces).',
+      icon: '🔩'
     },
     {
-      category: 'Industrial Facilities',
-      locations: [
-        'Factory rooftops',
-        'Electrical installations',
-        'Solar panel arrays',
-        'Communication towers',
-        'Storage facilities',
-        'Transportation hubs'
-      ],
-      image: 'https://images.unsplash.com/photo-1581092787765-e45d8b34bed0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80'
+      title: 'Cable Ties',
+      description: 'For round pipes or railings where fastening through base is needed.',
+      icon: '🔒'
     }
   ]
 
-  const spikeTypes = [
+  const relatedProducts = [
+    { name: 'Artificial Grass', icon: Home },
+    { name: 'Bird Spikes', icon: Shield },
+  ]
+
+  const faqs = [
     {
-      name: 'Stainless Steel Spikes',
-      material: '304 Grade Stainless Steel',
-      width: '32cm strips',
-      features: ['Rust-proof construction', 'Maximum durability', 'Professional appearance', '15+ year lifespan'],
-      bestFor: 'Premium installations, coastal areas',
-      price: 'Premium'
+      question: 'Will these spikes hurt birds?',
+      answer: 'No — Shanmukh spikes deter birds from landing but are designed not to injure.'
     },
     {
-      name: 'Polycarbonate Spikes',
-      material: 'UV Stabilized Plastic',
-      width: '33cm strips',
-      features: ['Cost-effective solution', 'Weather resistant', 'Easy installation', '10+ year lifespan'],
-      bestFor: 'Residential properties, budget projects',
-      price: 'Standard'
+      question: 'Which type is best for my building?',
+      answer: 'Use polycarbonate for near-visible residential/commercial locations (it\'s transparent). Use stainless steel for industrial, high-exposure or vandal-prone areas.'
     },
     {
-      name: 'Narrow Spikes',
-      material: 'Stainless Steel/Plastic',
-      width: '10cm strips',
-      features: ['Tight space installation', 'Discrete appearance', 'Flexible application', '8+ year lifespan'],
-      bestFor: 'Window sills, narrow ledges',
-      price: 'Economy'
+      question: 'How long do they last?',
+      answer: 'Polycarbonate is UV stabilized for long-term outdoor use; stainless steel is corrosion resistant. Lifespan depends on exposure and installation quality.'
     }
-  ]
-
-  const installationProcess = [
-    {
-      step: 1,
-      title: 'Site Survey',
-      description: 'Detailed assessment of bird problem areas and measurement of installation zones'
-    },
-    {
-      step: 2,
-      title: 'Solution Design',
-      description: 'Custom solution design based on bird species, building structure, and aesthetic requirements'
-    },
-    {
-      step: 3,
-      title: 'Surface Preparation',
-      description: 'Cleaning and preparation of installation surfaces for optimal adhesion'
-    },
-    {
-      step: 4,
-      title: 'Spike Installation',
-      description: 'Professional installation using weather-resistant adhesives and mechanical fixings'
-    },
-    {
-      step: 5,
-      title: 'Quality Check',
-      description: 'Final inspection and testing to ensure complete coverage and secure installation'
-    }
-  ]
-
-  const targetBirds = [
-    'Pigeons', 'Crows', 'Seagulls', 'Sparrows', 'Mynas', 'Doves', 'Starlings', 'Parrots'
-  ]
-
-  const maintenance = [
-    'Visual inspection every 6 months',
-    'Remove debris and leaves occasionally',
-    'Check adhesive bonds annually',
-    'Clean spikes if accumulation occurs',
-    'Professional maintenance available'
   ]
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Banner */}
       <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center mb-4">
-                <Shield className="h-8 w-8 text-blue-600 mr-3" />
-                <span className="text-blue-600 font-semibold">Bird Control Solutions</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                Effective <span className="text-blue-600">Bird Spike</span> Installation
+          <div className="text-center">
+            <div className="flex items-center justify-center mb-4">
+              <Shield className="h-10 w-10 text-blue-600 mr-3" />
+              <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
+                Shanmukh – Bird Spikes
               </h1>
-              <p className="text-xl text-gray-600 mb-8">
-                Protect your property from bird damage with our humane, professional bird spike solutions. 
-                Long-lasting deterrent that keeps birds away while maintaining your building's appearance.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  to="/contact"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center"
-                >
-                  Get Free Assessment
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-                <a 
-                  href="tel:+919876543210"
-                  className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200 flex items-center justify-center"
-                >
-                  <Phone className="mr-2 h-5 w-5" />
-                  Emergency Service
-                </a>
-              </div>
             </div>
-            <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1522926193341-e9ffd686c60f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                alt="Bird spikes installation"
-                className="rounded-2xl shadow-2xl"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg">
-                <div className="text-2xl font-bold text-blue-600">100%</div>
-                <div className="text-sm text-gray-600">Effective</div>
-              </div>
+            <p className="text-xl text-gray-700 mb-4 max-w-3xl mx-auto">
+              One-stop solution for Bird Proofing
+            </p>
+            <div className="flex items-center justify-center gap-4 text-lg text-blue-600 font-semibold mb-8">
+              <span className="flex items-center">
+                <CheckCircle className="h-5 w-5 mr-2" />
+                Durable
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="h-5 w-5 mr-2" />
+                Humane
+              </span>
+              <span className="flex items-center">
+                <CheckCircle className="h-5 w-5 mr-2" />
+                Maintenance-Free
+              </span>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center cursor-pointer"
+              >
+                Get a Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <button
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200 flex items-center justify-center cursor-pointer"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Product Brochure
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Problems Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Bird Problems We Solve
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Protect your property from costly damage and health risks caused by pest birds
-            </p>
-          </div>
+      {/* Tagline */}
+      <section className="py-8 bg-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-xl md:text-2xl text-white font-medium">
+            100% Polycarbonate & Stainless Steel Bird Spikes — invisible protection that keeps birds away without harm.
+          </p>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {problems.map((problem, index) => (
-              <div key={index} className="text-center bg-gray-50 p-6 rounded-2xl hover:bg-white hover:shadow-lg transition-all duration-300">
-                <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <problem.icon className="h-8 w-8 text-red-600" />
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">{problem.title}</h3>
-                <p className="text-gray-600">{problem.description}</p>
-              </div>
-            ))}
+      {/* Product Overview */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              Product Overview
+            </h2>
+            <p className="text-lg text-gray-700 leading-relaxed">
+              Shanmukh Bird Spikes are engineered bird-deterrent systems designed to prevent birds from perching and nesting on ledges, sills, beams, signboards and other vulnerable surfaces. Available in polycarbonate and stainless steel variants, our spikes are effective, long-lasting and easy to install.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Product Types */}
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Our Bird Spikes?
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Choose Your Bird Spike Solution
             </h2>
-            <p className="text-xl text-gray-600">
-              Humane, effective, and long-lasting bird deterrent solutions
+            <p className="text-lg text-gray-600">
+              Two premium options designed for different applications
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6">
-                  <benefit.icon className="h-8 w-8 text-blue-600" />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {productTypes.map((product, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <div className="relative h-48">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className={`absolute top-4 right-4 bg-${product.color}-600 text-white px-4 py-2 rounded-full font-semibold text-sm`}>
+                    Model {product.model}
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{benefit.title}</h3>
-                <p className="text-gray-600">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Applications Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Installation Applications
-            </h2>
-            <p className="text-xl text-gray-600">
-              Comprehensive bird control for all types of properties
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {applications.map((application, index) => (
-              <div key={index} className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <img 
-                  src={application.image} 
-                  alt={application.category}
-                  className="w-full h-48 object-cover"
-                />
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">{application.category}</h3>
-                  <div className="space-y-3">
-                    {application.locations.map((location, idx) => (
-                      <div key={idx} className="flex items-center">
-                        <CheckCircle className="h-4 w-4 text-blue-600 mr-3 flex-shrink-0" />
-                        <span className="text-gray-700 text-sm">{location}</span>
-                      </div>
-                    ))}
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{product.name}</h3>
+                  
+                  <div className="space-y-3 mb-6">
+                    <div>
+                      <span className="font-semibold text-gray-700">Material:</span>
+                      <p className="text-gray-600">{product.material}</p>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-gray-700">Appearance:</span>
+                      <p className="text-gray-600">{product.appearance}</p>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-gray-700">Durability:</span>
+                      <p className="text-gray-600">{product.durability}</p>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-gray-700">Installation:</span>
+                      <p className="text-gray-600">{product.installation}</p>
+                    </div>
+                    <div>
+                      <span className="font-semibold text-gray-700">Best Use:</span>
+                      <p className="text-gray-600">{product.use}</p>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-gray-200 pt-4">
+                    <h4 className="font-semibold text-gray-900 mb-3">Key Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {product.benefits.map((benefit, idx) => (
+                        <span key={idx} className={`bg-${product.color}-100 text-${product.color}-700 px-3 py-1 rounded-full text-sm font-medium`}>
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -319,194 +275,244 @@ const BirdSpikes = () => {
         </div>
       </section>
 
-      {/* Spike Types Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Specifications */}
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Choose the Right Spike System
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Features & Specifications
             </h2>
-            <p className="text-xl text-gray-600">
-              Different spike types for different applications and budgets
-            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {spikeTypes.map((spike, index) => (
-              <div key={index} className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-xl font-bold text-gray-900">{spike.name}</h3>
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    spike.price === 'Premium' ? 'bg-gold-100 text-gold-800' :
-                    spike.price === 'Standard' ? 'bg-blue-100 text-blue-800' :
-                    'bg-green-100 text-green-800'
-                  }`}>
-                    {spike.price}
-                  </span>
-                </div>
-                <div className="text-gray-600 mb-2">Material: {spike.material}</div>
-                <div className="text-gray-600 mb-6">Width: {spike.width}</div>
-                
-                <div className="space-y-3 mb-6">
-                  {spike.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center">
-                      <CheckCircle className="h-4 w-4 text-blue-600 mr-3 flex-shrink-0" />
-                      <span className="text-gray-700 text-sm">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-                
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <div className="font-semibold text-gray-900 mb-1">Best for:</div>
-                  <div className="text-gray-700 text-sm">{spike.bestFor}</div>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            {specifications.map((spec, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl text-center hover:bg-blue-50 transition-colors duration-200">
+                <div className="text-3xl font-bold text-blue-600 mb-2">{spec.value}</div>
+                <div className="text-gray-700 font-medium">{spec.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Target Birds Section */}
-      <section className="py-20 bg-white">
+      {/* Benefits */}
+      <section className="py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Effective Against All Pest Birds
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Why Choose Shanmukh Bird Spikes?
             </h2>
-            <p className="text-xl text-gray-600">
-              Our bird spikes deter all common pest bird species
-            </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-            {targetBirds.map((bird, index) => (
-              <div key={index} className="bg-blue-50 p-4 rounded-lg text-center hover:bg-blue-100 transition-colors duration-200">
-                <Bird className="h-8 w-8 text-blue-600 mx-auto mb-2" />
-                <div className="text-sm font-medium text-gray-900">{bird}</div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300">
+                <div className="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                  <benefit.icon className="h-6 w-6 text-blue-600" />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{benefit.title}</h3>
+                <p className="text-gray-600 text-sm">{benefit.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Installation Process Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Professional Installation Process
-            </h2>
-            <p className="text-xl text-gray-600">
-              Expert installation ensuring maximum effectiveness and longevity
-            </p>
-          </div>
-
-          <div className="relative max-w-4xl mx-auto">
-            {installationProcess.map((step, index) => (
-              <div key={index} className="flex items-start mb-12 last:mb-0">
-                <div className="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg mr-6 flex-shrink-0">
-                  {step.step}
-                </div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.description}</p>
-                </div>
-                {index < installationProcess.length - 1 && (
-                  <div className="absolute left-6 mt-12 w-px h-12 bg-blue-200"></div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Maintenance Section */}
-      <section className="py-20 bg-white">
+      {/* Application Areas */}
+      <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Minimal Maintenance Required
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                Typical Application Areas
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Once installed, bird spikes require very little maintenance to remain effective
-              </p>
-              <div className="space-y-4">
-                {maintenance.map((tip, index) => (
-                  <div key={index} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{tip}</span>
+              <div className="space-y-3">
+                {applications.map((app, index) => (
+                  <div key={index} className="flex items-center">
+                    <CheckCircle className="h-5 w-5 text-blue-600 mr-3 flex-shrink-0" />
+                    <span className="text-gray-700">{app}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="bg-blue-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Emergency Bird Control</h3>
-              <p className="text-gray-600 mb-6">
-                Dealing with an urgent bird problem? We offer same-day emergency services for critical situations.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Clock className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">24/7 Emergency Response</span>
-                </div>
-                <div className="flex items-center">
-                  <Shield className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">Immediate Problem Assessment</span>
-                </div>
-                <div className="flex items-center">
-                  <Zap className="h-5 w-5 text-blue-600 mr-3" />
-                  <span className="text-gray-700">Rapid Installation Service</span>
-                </div>
-              </div>
-              <a 
-                href="tel:+919876543210"
-                className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-flex items-center"
-              >
-                <Phone className="mr-2 h-5 w-5" />
-                Call Emergency Line
-              </a>
+            <div className="relative">
+              <img 
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                alt="Building applications"
+                className="rounded-xl shadow-lg"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Warranty Section */}
-      <section className="py-20 bg-blue-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <Shield className="h-16 w-16 text-white mx-auto mb-4" />
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quality Guarantee & Warranty
+      {/* Installation Methods */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Installation Methods
+            </h2>
+            <p className="text-lg text-gray-600">
+              Multiple installation options for different surfaces
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {installationMethods.map((method, index) => (
+              <div key={index} className="bg-white p-6 rounded-xl shadow-sm text-center">
+                <div className="text-4xl mb-3">{method.icon}</div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">{method.title}</h3>
+                <p className="text-gray-600 text-sm">{method.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg">
+            <p className="text-gray-700">
+              <span className="font-semibold">💡 Installation Tip:</span> Our flexible base allows a snug fit around curved edges. Use continuous strips to fully cover the ledge and prevent gaps.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose PROTECH */}
+      <section className="py-12 bg-blue-600">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+              Why Choose Shanmukh Bird Spikes?
             </h2>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white/10 rounded-2xl p-6 text-white">
-              <div className="text-3xl font-bold mb-2">10+ Years</div>
-              <div className="text-blue-100">Product Lifespan</div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              'Proven materials (UV stabilized polycarbonate and stainless steel)',
+              'Invisible protection option for aesthetic sites',
+              'Wide applicability — residential to industrial',
+              'Manufactured for weather durability and long life'
+            ].map((reason, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm p-6 rounded-xl text-white">
+                <div className="flex items-start">
+                  <Star className="h-5 w-5 mr-3 flex-shrink-0 mt-1" />
+                  <p className="text-sm">{reason}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related Products */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Related Products & Services
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {relatedProducts.map((product, index) => (
+              <div key={index} className="bg-gray-50 p-6 rounded-xl hover:bg-blue-50 transition-colors duration-200 cursor-pointer">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center">
+                    <product.icon className="h-6 w-6 text-blue-600 mr-3" />
+                    <span className="font-semibold text-gray-900">{product.name}</span>
+                  </div>
+                  <ChevronRight className="h-5 w-5 text-gray-400" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Details */}
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Contact Us
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
+              <MapPin className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+              <h3 className="font-semibold text-gray-900 mb-2">Factory & Warehouse</h3>
+              <p className="text-gray-600 text-sm">
+                1st Street, Sapthagiri Colony,<br />
+                BV Nagar, Mini Bypass<br />
+                Nellore – 4
+              </p>
             </div>
-            <div className="bg-white/10 rounded-2xl p-6 text-white">
-              <div className="text-3xl font-bold mb-2">2 Years</div>
-              <div className="text-blue-100">Installation Warranty</div>
+
+            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
+              <Phone className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+              <h3 className="font-semibold text-gray-900 mb-2">Phone</h3>
+              <p className="text-gray-600 text-sm">
+                <a href="tel:+917798320616" className="hover:text-blue-600 cursor-pointer">+91 9441 655 656</a><br />
+                {/* <a href="tel:+919773320616" className="hover:text-blue-600 cursor-pointer">+91 97733 20616</a> */}
+              </p>
             </div>
-            <div className="bg-white/10 rounded-2xl p-6 text-white">
-              <div className="text-3xl font-bold mb-2">100%</div>
-              <div className="text-blue-100">Effectiveness Guarantee</div>
+
+            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
+              <Mail className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+              <h3 className="font-semibold text-gray-900 mb-2">Email</h3>
+              <p className="text-gray-600 text-sm">
+                <a href="mailto:info@ebmpindia.com" className="hover:text-blue-600 cursor-pointer">shanmukhartificialgrass@gmail.com</a><br />
+                {/* <a href="mailto:ebmpindia@gmail.com" className="hover:text-blue-600 cursor-pointer">ebmpindia@gmail.com</a> */}
+              </p>
             </div>
           </div>
 
-          <p className="text-xl text-blue-100 mb-8">
-            If birds return to treated areas within warranty period, we'll reinstall at no cost
-          </p>
+          <div className="text-center">
+            <p className="text-gray-600 mb-6">
+              Website: <a href="https://www.ebmpindia.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline cursor-pointer">www.ebmpindia.com</a>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-flex items-center justify-center cursor-pointer"
+              >
+                Request a Quote
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/contact"
+                className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200 inline-flex items-center justify-center cursor-pointer"
+              >
+                Book an Installation
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          <Link
-            to="/contact"
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center"
-          >
-            Schedule Free Assessment
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+      {/* FAQ */}
+      <section className="py-12 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-6">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3 flex items-start">
+                  <span className="text-blue-600 mr-2">Q:</span>
+                  {faq.question}
+                </h3>
+                <p className="text-gray-700 pl-6">
+                  <span className="text-blue-600 font-semibold mr-2">A:</span>
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
