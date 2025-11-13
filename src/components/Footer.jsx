@@ -18,11 +18,8 @@ const Footer = () => {
   const currentYear = new Date().getFullYear()
 
   const services = [
-    { name: 'Artificial Grass Installation', link: '/artificial-grass' },
-    { name: 'Bird Spikes Installation', link: '/bird-spikes' },
-    { name: 'Residential Landscaping', link: '/artificial-grass' },
-    { name: 'Commercial Solutions', link: '/contact' },
-    { name: 'Maintenance Services', link: '/contact' }
+    { name: 'Artificial Grass', link: '/artificial-grass' },
+    { name: 'Bird Spikes', link: '/bird-spikes' },
   ]
 
   const quickLinks = [
@@ -126,10 +123,10 @@ const Footer = () => {
                   <Phone className="h-4 w-4 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <div>
                     <a 
-                      href="tel:+919876543210"
+                      href="tel:+919441655656"
                       className="text-gray-400 hover:text-green-500 transition-colors duration-200 text-sm cursor-pointer"
                     >
-                      +91 98765 43210
+                      +91 9441 655 656
                     </a>
                   </div>
                 </div>
@@ -138,10 +135,10 @@ const Footer = () => {
                   <Mail className="h-4 w-4 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <div>
                     <a 
-                      href="mailto:info@shanmukhgrass.com"
+                      href="mailto:shanmukhartificialgrass@gmail.com"
                       className="text-gray-400 hover:text-green-500 transition-colors duration-200 text-sm cursor-pointer"
                     >
-                      info@shanmukhgrass.com
+                      shanmukhartificialgrass@gmail.com
                     </a>
                   </div>
                 </div>
@@ -149,16 +146,14 @@ const Footer = () => {
                 <div className="flex items-start">
                   <MapPin className="h-4 w-4 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <div className="text-gray-400 text-sm">
-                    Hyderabad, Telangana<br />
-                    India
+                    Sapthagiri Colony, BV Nagar, Mini Bypass, Nellore-4
                   </div>
                 </div>
 
                 <div className="flex items-start">
                   <Clock className="h-4 w-4 text-green-500 mt-1 mr-3 flex-shrink-0" />
                   <div className="text-gray-400 text-sm">
-                    Mon-Sat: 9AM-7PM<br />
-                    Sun: 10AM-4PM
+                    24/7
                   </div>
                 </div>
               </div>
