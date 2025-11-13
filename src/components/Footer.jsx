@@ -189,16 +189,12 @@ const Footer = () => {
               © {currentYear} Shanmukh Artificial Grass. All rights reserved.
             </div>
             <div className="text-gray-400 text-sm md:text-right">
-              <Link to="/contact" className="hover:text-green-500 transition-colors cursor-pointer">
+              <Link to="/privacy-policy" className="hover:text-green-500 transition-colors cursor-pointer">
                 Privacy Policy
               </Link>
               <span className="mx-2">•</span>
-              <Link to="/contact" className="hover:text-green-500 transition-colors cursor-pointer">
-                Terms of Service
-              </Link>
-              <span className="mx-2">•</span>
-              <Link to="/contact" className="hover:text-green-500 transition-colors cursor-pointer">
-                Sitemap
+              <Link to="/terms-conditions" className="hover:text-green-500 transition-colors cursor-pointer">
+                Terms & Conditions
               </Link>
             </div>
           </div>

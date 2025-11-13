@@ -8,6 +8,9 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import ArtificialGrass from './pages/ArtificialGrass'
 import BirdSpikes from './pages/BirdSpikes'
+import PrivacyPolicy from './pages/PrivacyPolicy'
+import TermsConditions from './pages/TermsConditions'
+import NotFound from './pages/NotFound'
 import './App.css'
 
 const App = () => {
@@ -23,6 +26,9 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/artificial-grass" element={<ArtificialGrass />} />
             <Route path="/bird-spikes" element={<BirdSpikes />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-conditions" element={<TermsConditions />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
