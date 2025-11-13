@@ -6,19 +6,19 @@ const TermsConditions = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-green-50 via-white to-green-50 pt-24 pb-16">
+      <section className="relative bg-gradient-to-br from-green-50 via-white to-green-50 pt-20 md:pt-24 pb-12 md:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <div className="flex items-center justify-center mb-4">
-              <Scale className="h-12 w-12 text-green-600 mr-3" />
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
+            <div className="flex items-center justify-center mb-3 md:mb-4">
+              <Scale className="h-10 w-10 md:h-12 md:w-12 text-green-600 mr-2 md:mr-3" />
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
                 Terms & Conditions
               </h1>
             </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
               Please read these terms and conditions carefully before using our services for artificial grass installation and bird spike solutions.
             </p>
-            <p className="text-sm text-gray-500 mt-4">
+            <p className="text-xs md:text-sm text-gray-500 mt-3 md:mt-4">
               Last Updated: November 13, 2025
             </p>
           </div>
@@ -26,17 +26,17 @@ const TermsConditions = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-12 bg-white">
+      <section className="py-8 md:py-12 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Introduction */}
-          <div className="mb-12">
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-8">
+          <div className="mb-8 md:mb-12">
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 md:p-6 rounded-lg mb-6 md:mb-8">
               <div className="flex items-start">
-                <AlertTriangle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" />
+                <AlertTriangle className="h-5 w-5 md:h-6 md:w-6 text-blue-600 mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Agreement to Terms</h3>
-                  <p className="text-gray-700 text-sm">
+                  <h3 className="font-semibold text-gray-900 mb-1 md:mb-2 text-sm md:text-base">Agreement to Terms</h3>
+                  <p className="text-gray-700 text-xs md:text-sm">
                     By accessing or using the services of Shanmukh Artificial Grass, you agree to be bound by these Terms and Conditions. 
                     If you disagree with any part of these terms, you may not use our services.
                   </p>
@@ -46,23 +46,23 @@ const TermsConditions = () => {
           </div>
 
           {/* Service Terms */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <Wrench className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">1. Services Provided</h2>
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
+              <Wrench className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-2 md:mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">1. Services Provided</h2>
             </div>
 
-            <div className="ml-11 space-y-4">
-              <p className="text-gray-700">
+            <div className="ml-9 md:ml-11 space-y-3 md:space-y-4">
+              <p className="text-gray-700 text-sm md:text-base">
                 Shanmukh Artificial Grass provides the following services:
               </p>
               
-              <div className="space-y-3">
+              <div className="space-y-2 md:space-y-3">
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-green-600 mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Artificial Grass Installation</h4>
-                    <p className="text-gray-700 text-sm">
+                    <h4 className="font-semibold text-gray-900 text-sm md:text-base">Artificial Grass Installation</h4>
+                    <p className="text-gray-700 text-xs md:text-sm">
                       Supply and installation of premium artificial grass for residential, commercial, and sports applications. 
                       Available in various pile heights (25mm, 35mm, 40mm, 50mm) with single and double-layer backing options.
                     </p>
@@ -70,10 +70,10 @@ const TermsConditions = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-green-600 mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Bird Spike Solutions</h4>
-                    <p className="text-gray-700 text-sm">
+                    <h4 className="font-semibold text-gray-900 text-sm md:text-base">Bird Spike Solutions</h4>
+                    <p className="text-gray-700 text-xs md:text-sm">
                       Installation of PROTECH Shield bird spike systems (Model C1001 polycarbonate and C1002 stainless steel) 
                       for effective and humane bird control.
                     </p>
@@ -81,10 +81,10 @@ const TermsConditions = () => {
                 </div>
 
                 <div className="flex items-start">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-green-600 mr-2 md:mr-3 flex-shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="font-semibold text-gray-900">Consultation & Site Visits</h4>
-                    <p className="text-gray-700 text-sm">
+                    <h4 className="font-semibold text-gray-900 text-sm md:text-base">Consultation & Site Visits</h4>
+                    <p className="text-gray-700 text-xs md:text-sm">
                       Free site visits, professional consultations, and custom quotations based on your specific requirements.
                     </p>
                   </div>
@@ -94,14 +94,14 @@ const TermsConditions = () => {
           </div>
 
           {/* Quotations and Pricing */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <CreditCard className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">2. Quotations and Pricing</h2>
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
+              <CreditCard className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-2 md:mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">2. Quotations and Pricing</h2>
             </div>
 
-            <div className="ml-11 space-y-4">
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <div className="ml-9 md:ml-11 space-y-3 md:space-y-4">
+              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-xs md:text-sm">
                 <li>All quotations are valid for 30 days from the date of issue</li>
                 <li>Quotations are based on site visit assessments and provided measurements</li>
                 <li>Prices include materials, labor, and installation unless otherwise specified</li>
@@ -114,13 +114,13 @@ const TermsConditions = () => {
           </div>
 
           {/* Payment Terms */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <CreditCard className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">3. Payment Terms</h2>
+              <CreditCard className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">3. Payment Terms</h2>
             </div>
 
-            <div className="ml-11 space-y-4">
+            <div className="ml-9 md:ml-11 space-y-4">
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">Payment Schedule</h4>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm">
@@ -141,7 +141,7 @@ const TermsConditions = () => {
               </div>
 
               <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded">
-                <p className="text-gray-700 text-sm">
+                <p className="text-gray-700 text-xs md:text-sm">
                   <strong>Note:</strong> Work will not commence until advance payment is received. Delays in payment may result in 
                   project postponement or cancellation.
                 </p>
@@ -150,14 +150,14 @@ const TermsConditions = () => {
           </div>
 
           {/* Installation Process */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <Wrench className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">4. Installation and Project Timeline</h2>
+              <Wrench className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">4. Installation and Project Timeline</h2>
             </div>
 
-            <div className="ml-11 space-y-4">
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <div className="ml-9 md:ml-11 space-y-4">
+              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-xs md:text-sm">
                 <li>Installation timelines are estimates and may vary based on project size and complexity</li>
                 <li>Typical residential projects take 1-2 days; commercial projects may take longer</li>
                 <li>Client must ensure clear access to installation area on scheduled dates</li>
@@ -170,13 +170,13 @@ const TermsConditions = () => {
           </div>
 
           {/* Warranties */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <Shield className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">5. Warranties and Guarantees</h2>
+              <Shield className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">5. Warranties and Guarantees</h2>
             </div>
 
-            <div className="ml-11 space-y-4">
+            <div className="ml-9 md:ml-11 space-y-4">
               <div className="bg-green-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">Material Warranty</h4>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm">
@@ -210,15 +210,15 @@ const TermsConditions = () => {
           </div>
 
           {/* Client Responsibilities */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <CheckCircle className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">6. Client Responsibilities</h2>
+              <CheckCircle className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">6. Client Responsibilities</h2>
             </div>
 
-            <div className="ml-11">
+            <div className="ml-9 md:ml-11">
               <p className="text-gray-700 mb-4">As a client, you agree to:</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-xs md:text-sm">
                 <li>Provide accurate measurements and site information</li>
                 <li>Ensure site accessibility for our installation team and equipment</li>
                 <li>Obtain necessary permissions from property owners or housing societies</li>
@@ -232,13 +232,13 @@ const TermsConditions = () => {
           </div>
 
           {/* Cancellation and Refunds */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <AlertTriangle className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">7. Cancellation and Refund Policy</h2>
+              <AlertTriangle className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">7. Cancellation and Refund Policy</h2>
             </div>
 
-            <div className="ml-11 space-y-4">
+            <div className="ml-9 md:ml-11 space-y-4">
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">Cancellation by Client</h4>
                 <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm">
@@ -251,7 +251,7 @@ const TermsConditions = () => {
 
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h4 className="font-semibold text-gray-900 mb-2">Cancellation by Shanmukh Artificial Grass</h4>
-                <p className="text-gray-700 text-sm">
+                <p className="text-gray-700 text-xs md:text-sm">
                   We reserve the right to cancel or postpone projects due to unforeseen circumstances, material unavailability, 
                   or safety concerns. In such cases, full refund will be provided with no penalties.
                 </p>
@@ -260,14 +260,14 @@ const TermsConditions = () => {
           </div>
 
           {/* Liability */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <Scale className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">8. Limitation of Liability</h2>
+              <Scale className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">8. Limitation of Liability</h2>
             </div>
 
-            <div className="ml-11">
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <div className="ml-9 md:ml-11">
+              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-xs md:text-sm">
                 <li>Our liability is limited to the contract value of the specific project</li>
                 <li>We are not liable for indirect, consequential, or incidental damages</li>
                 <li>We are not responsible for pre-existing structural issues or hidden defects in installation surfaces</li>
@@ -279,17 +279,17 @@ const TermsConditions = () => {
           </div>
 
           {/* Maintenance */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <Wrench className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">9. Maintenance and Care</h2>
+              <Wrench className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">9. Maintenance and Care</h2>
             </div>
 
-            <div className="ml-11">
+            <div className="ml-9 md:ml-11">
               <p className="text-gray-700 mb-4">
                 To maintain warranty validity and product longevity, clients must:
               </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-xs md:text-sm">
                 <li>Follow provided maintenance guidelines</li>
                 <li>Regularly brush artificial grass to maintain appearance</li>
                 <li>Rinse periodically to remove dust and debris</li>
@@ -301,13 +301,13 @@ const TermsConditions = () => {
           </div>
 
           {/* Intellectual Property */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <Shield className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">10. Intellectual Property</h2>
+              <Shield className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">10. Intellectual Property</h2>
             </div>
 
-            <div className="ml-11">
+            <div className="ml-9 md:ml-11">
               <p className="text-gray-700">
                 All content on our website, including text, graphics, logos, images, and design elements, is the property of 
                 Shanmukh Artificial Grass or licensed partners. Unauthorized use, reproduction, or distribution is prohibited 
@@ -317,17 +317,17 @@ const TermsConditions = () => {
           </div>
 
           {/* Dispute Resolution */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <Scale className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">11. Dispute Resolution</h2>
+              <Scale className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">11. Dispute Resolution</h2>
             </div>
 
-            <div className="ml-11 space-y-4">
+            <div className="ml-9 md:ml-11 space-y-4">
               <p className="text-gray-700">
                 In the event of any disputes or disagreements:
               </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-xs md:text-sm">
                 <li>Parties agree to first attempt resolution through good-faith negotiations</li>
                 <li>If negotiations fail, disputes may be referred to mediation</li>
                 <li>Legal jurisdiction will be Nellore, Andhra Pradesh</li>
@@ -337,13 +337,13 @@ const TermsConditions = () => {
           </div>
 
           {/* Changes to Terms */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <FileText className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">12. Changes to Terms</h2>
+              <FileText className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">12. Changes to Terms</h2>
             </div>
 
-            <div className="ml-11">
+            <div className="ml-9 md:ml-11">
               <p className="text-gray-700">
                 We reserve the right to modify these Terms and Conditions at any time. Updated terms will be posted on our 
                 website with a new "Last Updated" date. Continued use of our services constitutes acceptance of revised terms. 
@@ -353,13 +353,13 @@ const TermsConditions = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <div className="flex items-center mb-6">
-              <Mail className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">13. Contact Information</h2>
+              <Mail className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">13. Contact Information</h2>
             </div>
 
-            <div className="ml-11">
+            <div className="ml-9 md:ml-11">
               <p className="text-gray-700 mb-4">
                 For questions about these Terms and Conditions or to discuss your project:
               </p>
@@ -379,7 +379,7 @@ const TermsConditions = () => {
           {/* Acknowledgment */}
           <div className="bg-gradient-to-r from-green-50 to-blue-50 border-2 border-green-200 p-8 rounded-xl">
             <div className="flex items-start">
-              <CheckCircle className="h-8 w-8 text-green-600 mr-4 flex-shrink-0" />
+              <CheckCircle className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-4 flex-shrink-0" />
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Acknowledgment and Acceptance</h3>
                 <p className="text-gray-700 mb-4">

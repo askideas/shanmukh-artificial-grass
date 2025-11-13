@@ -30,13 +30,13 @@ const PrivacyPolicy = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Introduction */}
-          <div className="mb-12">
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-6 rounded-lg mb-8">
+          <div className="mb-8 md:mb-12">
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 md:p-6 rounded-lg mb-6 md:mb-8">
               <div className="flex items-start">
-                <AlertCircle className="h-6 w-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" />
+                <AlertCircle className="h-5 w-5 md:h-6 md:w-6 text-blue-600 mr-3 flex-shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Important Notice</h3>
-                  <p className="text-gray-700 text-sm">
+                  <h3 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Important Notice</h3>
+                  <p className="text-gray-700 text-xs md:text-sm">
                     Shanmukh Artificial Grass ("we," "our," or "us") is committed to protecting your privacy. 
                     This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website 
                     or use our services for artificial grass installation and bird spike solutions.
@@ -47,19 +47,19 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Information We Collect */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <Database className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">1. Information We Collect</h2>
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
+              <Database className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3 flex-shrink-0" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">1. Information We Collect</h2>
             </div>
 
-            <div className="space-y-6 ml-11">
+            <div className="space-y-4 md:space-y-6 ml-9 md:ml-11">
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Personal Information</h3>
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3">Personal Information</h3>
                 <p className="text-gray-700 mb-3">
                   When you contact us for a quote, consultation, or service, we may collect:
                 </p>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-xs md:text-sm">
                   <li>Full name</li>
                   <li>Mobile phone number</li>
                   <li>Email address</li>
@@ -70,8 +70,8 @@ const PrivacyPolicy = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Automatically Collected Information</h3>
-                <ul className="list-disc list-inside space-y-2 text-gray-700">
+                <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-3">Automatically Collected Information</h3>
+                <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-base">
                   <li>Browser type and version</li>
                   <li>Device information</li>
                   <li>IP address and location data</li>
@@ -83,15 +83,15 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* How We Use Your Information */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <UserCheck className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">2. How We Use Your Information</h2>
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
+              <UserCheck className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3 flex-shrink-0" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">2. How We Use Your Information</h2>
             </div>
 
-            <div className="ml-11">
-              <p className="text-gray-700 mb-4">We use the collected information for the following purposes:</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <div className="ml-9 md:ml-11">
+              <p className="text-gray-700 mb-4 text-sm md:text-base">We use the collected information for the following purposes:</p>
+              <ul className="list-disc list-inside space-y-2 text-gray-700 text-sm md:text-base">
                 <li>To provide quotes and consultations for artificial grass and bird spike installations</li>
                 <li>To schedule site visits and installation appointments</li>
                 <li>To communicate about your project status and updates</li>
@@ -106,36 +106,36 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Information Sharing */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <Eye className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">3. Information Sharing and Disclosure</h2>
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
+              <Eye className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3 flex-shrink-0" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">3. Information Sharing and Disclosure</h2>
             </div>
 
-            <div className="ml-11 space-y-4">
-              <p className="text-gray-700">
+            <div className="ml-9 md:ml-11 space-y-4">
+              <p className="text-gray-700 text-sm md:text-base">
                 We do not sell, trade, or rent your personal information to third parties. We may share your information only in the following circumstances:
               </p>
               
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Service Providers</h4>
-                <p className="text-gray-700 text-sm">
+              <div className="bg-gray-50 p-3 md:p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Service Providers</h4>
+                <p className="text-gray-700 text-xs md:text-sm">
                   We may share information with trusted third-party service providers who assist us in operating our business, 
                   such as payment processors, installation teams, or communication services.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Legal Requirements</h4>
-                <p className="text-gray-700 text-sm">
+              <div className="bg-gray-50 p-3 md:p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Legal Requirements</h4>
+                <p className="text-gray-700 text-xs md:text-sm">
                   We may disclose your information if required by law, court order, or government regulation, 
                   or to protect our rights, property, or safety.
                 </p>
               </div>
 
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Business Transfers</h4>
-                <p className="text-gray-700 text-sm">
+              <div className="bg-gray-50 p-3 md:p-4 rounded-lg">
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm md:text-base">Business Transfers</h4>
+                <p className="text-gray-700 text-xs md:text-sm">
                   In the event of a merger, acquisition, or sale of assets, your information may be transferred 
                   to the acquiring entity.
                 </p>
@@ -144,23 +144,23 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Data Security */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <Lock className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">4. Data Security</h2>
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
+              <Lock className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-3 flex-shrink-0" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">4. Data Security</h2>
             </div>
 
-            <div className="ml-11">
-              <p className="text-gray-700 mb-4">
+            <div className="ml-9 md:ml-11">
+              <p className="text-gray-700 mb-4 text-sm md:text-base">
                 We implement appropriate technical and organizational security measures to protect your personal information from:
               </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4">
+              <ul className="list-disc list-inside space-y-2 text-gray-700 mb-4 text-sm md:text-base">
                 <li>Unauthorized access or disclosure</li>
                 <li>Accidental loss or destruction</li>
                 <li>Misuse or alteration</li>
                 <li>Unlawful processing</li>
               </ul>
-              <div className="bg-yellow-50 border-l-4 border-yellow-600 p-4 rounded">
+              <div className="bg-yellow-50 border-l-4 border-yellow-600 p-3 md:p-4 rounded">
                 <p className="text-gray-700 text-sm">
                   <strong>Note:</strong> While we strive to protect your information, no method of transmission over the internet 
                   or electronic storage is 100% secure. We cannot guarantee absolute security.
@@ -170,15 +170,15 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Your Rights */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <FileText className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">5. Your Privacy Rights</h2>
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
+              <FileText className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-2 md:mr-3 flex-shrink-0" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">5. Your Privacy Rights</h2>
             </div>
 
-            <div className="ml-11">
-              <p className="text-gray-700 mb-4">You have the right to:</p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+            <div className="ml-9 md:ml-11">
+              <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">You have the right to:</p>
+              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-xs md:text-sm">
                 <li><strong>Access:</strong> Request a copy of the personal information we hold about you</li>
                 <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
                 <li><strong>Deletion:</strong> Request deletion of your personal information (subject to legal obligations)</li>
@@ -196,18 +196,18 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Cookies */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
               <Database className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">6. Cookies and Tracking Technologies</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">6. Cookies and Tracking Technologies</h2>
             </div>
 
-            <div className="ml-11">
-              <p className="text-gray-700 mb-4">
+            <div className="ml-9 md:ml-11">
+              <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
                 Our website may use cookies and similar tracking technologies to enhance your browsing experience. 
                 Cookies are small files stored on your device that help us:
               </p>
-              <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <ul className="list-disc list-inside space-y-1.5 md:space-y-2 text-gray-700 text-xs md:text-sm">
                 <li>Remember your preferences and settings</li>
                 <li>Understand how you use our website</li>
                 <li>Improve website functionality and performance</li>
@@ -221,13 +221,13 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Data Retention */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
               <Database className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">7. Data Retention</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">7. Data Retention</h2>
             </div>
 
-            <div className="ml-11">
+            <div className="ml-9 md:ml-11">
               <p className="text-gray-700">
                 We retain your personal information only for as long as necessary to fulfill the purposes outlined in this 
                 Privacy Policy, unless a longer retention period is required by law. After completion of services, we may 
@@ -237,13 +237,13 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Third-Party Links */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
               <Eye className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">8. Third-Party Websites</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">8. Third-Party Websites</h2>
             </div>
 
-            <div className="ml-11">
+            <div className="ml-9 md:ml-11">
               <p className="text-gray-700">
                 Our website may contain links to third-party websites or services. We are not responsible for the privacy 
                 practices or content of these external sites. We encourage you to review the privacy policies of any 
@@ -253,13 +253,13 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Children's Privacy */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
               <Shield className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">9. Children's Privacy</h2>
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">9. Children's Privacy</h2>
             </div>
 
-            <div className="ml-11">
+            <div className="ml-9 md:ml-11">
               <p className="text-gray-700">
                 Our services are not directed to individuals under the age of 18. We do not knowingly collect personal 
                 information from children. If you believe we have collected information from a child, please contact us 
@@ -269,13 +269,13 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Changes to Policy */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <FileText className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">10. Changes to This Privacy Policy</h2>
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
+              <FileText className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-2 md:mr-3 flex-shrink-0" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">10. Changes to This Privacy Policy</h2>
             </div>
 
-            <div className="ml-11">
+            <div className="ml-9 md:ml-11">
               <p className="text-gray-700">
                 We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. 
                 We will notify you of any material changes by posting the updated policy on our website with a new "Last Updated" 
@@ -285,14 +285,14 @@ const PrivacyPolicy = () => {
           </div>
 
           {/* Contact Information */}
-          <div className="mb-12">
-            <div className="flex items-center mb-6">
-              <Mail className="h-8 w-8 text-green-600 mr-3" />
-              <h2 className="text-2xl font-bold text-gray-900">11. Contact Us</h2>
+          <div className="mb-8 md:mb-12">
+            <div className="flex items-center mb-4 md:mb-6">
+              <Mail className="h-6 w-6 md:h-8 md:w-8 text-green-600 mr-2 md:mr-3 flex-shrink-0" />
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900">11. Contact Us</h2>
             </div>
 
-            <div className="ml-11">
-              <p className="text-gray-700 mb-4">
+            <div className="ml-9 md:ml-11">
+              <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
                 If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, 
                 please contact us:
               </p>
@@ -314,7 +314,7 @@ const PrivacyPolicy = () => {
               <Shield className="h-8 w-8 text-green-600 mr-4 flex-shrink-0" />
               <div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Your Consent</h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
                   By using our website and services, you consent to this Privacy Policy and agree to its terms. 
                   If you do not agree with this policy, please do not use our services.
                 </p>
