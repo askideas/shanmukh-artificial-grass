@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Star, Users, Award, CheckCircle, Leaf, Shield, Phone, ChevronLeft, ChevronRight, Droplets, Clock, Sun, Heart, Home as HomeIcon, Building, Sparkles, TreePine } from 'lucide-react'
+import QuoteModal from '../components/QuoteModal'
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
 
   const heroSlides = [
     {
@@ -186,13 +188,13 @@ const Home = () => {
               {heroSlides[currentSlide].description}
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
-              <Link
-                to="/contact"
+              <button
+                onClick={() => setIsQuoteModalOpen(true)}
                 className="w-full sm:w-auto bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 flex items-center justify-center cursor-pointer text-sm md:text-base"
               >
                 Get Free Quote
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </button>
               <Link
                 to="/about"
                 className="w-full sm:w-auto border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-colors duration-200 cursor-pointer text-sm md:text-base"
@@ -533,13 +535,13 @@ const Home = () => {
             Let's bring your outdoor vision to life!
           </p>
           <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center px-2">
-            <Link
-              to="/contact"
+            <button
+              onClick={() => setIsQuoteModalOpen(true)}
               className="bg-white text-green-600 px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center cursor-pointer text-sm md:text-base"
             >
               <Phone className="mr-2 h-4 w-4" />
-              Contact Us Now
-            </Link>
+              Request Quote
+            </button>
             <a
               href="tel:+919441655656"
               className="border-2 border-white text-white px-4 md:px-6 py-2 md:py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors duration-200 flex items-center justify-center cursor-pointer text-sm md:text-base"
@@ -550,6 +552,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   )
 }

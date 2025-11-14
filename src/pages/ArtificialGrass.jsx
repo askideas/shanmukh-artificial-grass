@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import QuoteModal from '../components/QuoteModal'
 import { 
   Leaf, 
   CheckCircle, 
@@ -22,6 +23,7 @@ import {
 const ArtificialGrass = () => {
   const [selectedPile, setSelectedPile] = useState('all')
   const [selectedBacking, setSelectedBacking] = useState('all')
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
 
   const grassVariants = [
     {
@@ -170,13 +172,13 @@ const ArtificialGrass = () => {
               Luxury landscaping with minimal maintenance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <button
+                onClick={() => setIsQuoteModalOpen(true)}
                 className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 flex items-center justify-center cursor-pointer"
               >
                 Get a Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </button>
               <a
                 href="#catalog"
                 className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors duration-200 cursor-pointer"
@@ -340,12 +342,12 @@ const ArtificialGrass = () => {
                     </p>
                   </div>
 
-                  <Link
-                    to="/contact"
+                  <button
+                    onClick={() => setIsQuoteModalOpen(true)}
                     className="block w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 text-center cursor-pointer"
                   >
                     Request Quote
-                  </Link>
+                  </button>
                 </div>
               </div>
             ))}
@@ -412,13 +414,13 @@ const ArtificialGrass = () => {
               <p className="text-gray-700 mb-4">
                 We can cut grass to your exact specifications. Contact us with your measurements for a personalized quote.
               </p>
-              <Link
-                to="/contact"
+              <button
+                onClick={() => setIsQuoteModalOpen(true)}
                 className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 cursor-pointer"
               >
                 Contact for Custom Sizing
                 <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -469,19 +471,19 @@ const ArtificialGrass = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
+            <button
+              onClick={() => setIsQuoteModalOpen(true)}
               className="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 inline-flex items-center justify-center cursor-pointer"
             >
               Request a Quote
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
-              to="/contact"
+            </button>
+            <button
+              onClick={() => setIsQuoteModalOpen(true)}
               className="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors duration-200 inline-flex items-center justify-center cursor-pointer"
             >
               Schedule Installation
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -497,15 +499,17 @@ const ArtificialGrass = () => {
             Experience the perfect blend of luxury, durability, and low maintenance. 
             Contact us today for samples and expert consultation.
           </p>
-          <Link
-            to="/contact"
+          <button
+            onClick={() => setIsQuoteModalOpen(true)}
             className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center cursor-pointer"
           >
             Get Started Today
             <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+          </button>
         </div>
       </section>
+
+      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   )
 }

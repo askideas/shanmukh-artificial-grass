@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,6 +10,8 @@ const Contact = () => {
     service: ''
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null)
 
   const handleChange = (e) => {
     setFormData({
@@ -17,22 +20,47 @@ const Contact = () => {
     })
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // In a real application, you would send this data to your backend
-    console.log('Form submitted:', formData)
-    setIsSubmitted(true)
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+
+    try {
+      const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+      const templateID = import.meta.env.VITE_EMAILJS_CONTACT_TEMPLATE_ID
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+      const templateParams = {
+        to_email: 'shanmukhartificialgrass@gmail.com',
+        customer_name: formData.name,
+        customer_phone: formData.phone,
+        customer_address: formData.address,
+        service_type: formData.service,
+        message: `Contact Form Submission\n\nName: ${formData.name}\nPhone: ${formData.phone}\nAddress: ${formData.address}\nService: ${formData.service}`
+      }
+
+      await emailjs.send(serviceID, templateID, templateParams, publicKey)
+
+      setIsSubmitted(true)
+      setSubmitStatus('success')
       setFormData({
         name: '',
         phone: '',
         address: '',
         service: ''
       })
-    }, 3000)
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setSubmitStatus(null)
+      }, 5000)
+    } catch (error) {
+      console.error('Error sending email:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
@@ -186,12 +214,35 @@ const Contact = () => {
                     </select>
                   </div>
 
+                  {submitStatus === 'error' && (
+                    <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg text-sm">
+                      ✗ Failed to send message. Please try calling us directly.
+                    </div>
+                  )}
+
                   <button
                     type="submit"
-                    className="w-full bg-green-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 flex items-center justify-center cursor-pointer"
+                    disabled={isSubmitting}
+                    className={`w-full px-6 py-4 rounded-lg font-semibold transition-colors duration-200 flex items-center justify-center ${
+                      isSubmitting
+                        ? 'bg-gray-400 cursor-not-allowed'
+                        : 'bg-green-600 hover:bg-green-700 cursor-pointer'
+                    } text-white`}
                   >
-                    Submit
-                    <Send className="ml-2 h-5 w-5" />
+                    {isSubmitting ? (
+                      <span className="flex items-center">
+                        <svg className="animate-spin h-5 w-5 mr-2" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : (
+                      <>
+                        Submit
+                        <Send className="ml-2 h-5 w-5" />
+                      </>
+                    )}
                   </button>
                 </form>
               )}

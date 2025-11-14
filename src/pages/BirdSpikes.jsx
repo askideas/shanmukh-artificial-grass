@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import QuoteModal from '../components/QuoteModal'
 import { 
   Shield, 
   CheckCircle, 
@@ -20,6 +21,8 @@ import {
 } from 'lucide-react'
 
 const BirdSpikes = () => {
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
+
   const productTypes = [
     {
       model: 'C1001',
@@ -166,13 +169,13 @@ const BirdSpikes = () => {
               </span>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <button
+                onClick={() => setIsQuoteModalOpen(true)}
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center cursor-pointer"
               >
                 Get a Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
+              </button>
               <button
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200 flex items-center justify-center cursor-pointer"
               >
@@ -472,19 +475,19 @@ const BirdSpikes = () => {
               Website: <a href="https://www.ebmpindia.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline cursor-pointer">www.ebmpindia.com</a>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
+              <button
+                onClick={() => setIsQuoteModalOpen(true)}
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 inline-flex items-center justify-center cursor-pointer"
               >
                 Request a Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-              <Link
-                to="/contact"
+              </button>
+              <button
+                onClick={() => setIsQuoteModalOpen(true)}
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200 inline-flex items-center justify-center cursor-pointer"
               >
                 Book an Installation
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -515,6 +518,8 @@ const BirdSpikes = () => {
           </div>
         </div>
       </section>
+
+      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   )
 }

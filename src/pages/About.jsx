@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import QuoteModal from '../components/QuoteModal'
 import { Users, Target, Award, Heart, Clock, Shield, CheckCircle, ArrowRight } from 'lucide-react'
 
 const About = () => {
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
+
   const values = [
     {
       icon: Award,
@@ -266,13 +269,13 @@ const About = () => {
             Let's discuss your project and how we can help transform your outdoor space.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
+            <button
+              onClick={() => setIsQuoteModalOpen(true)}
               className="bg-green-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 flex items-center justify-center"
             >
               Get in Touch
               <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
+            </button>
             <Link
               to="/artificial-grass"
               className="border-2 border-green-600 text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-green-600 hover:text-white transition-colors duration-200"
@@ -282,6 +285,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
     </div>
   )
 }
