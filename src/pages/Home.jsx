@@ -7,19 +7,19 @@ const Home = () => {
 
   const heroSlides = [
     {
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/AG1.jpeg?updatedAt=1763088504409',
       title: 'Premium Artificial Grass',
       subtitle: 'Transform Your Outdoor Space',
       description: 'Beautiful, low-maintenance artificial grass solutions for homes and businesses'
     },
     {
-      image: 'https://images.unsplash.com/photo-1574090424863-0dda9e448184?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/AG2.jpg?updatedAt=1763088550575',
       title: 'Professional Installation',
       subtitle: 'Expert Craftsmanship',
       description: 'Skilled installation team with years of experience and attention to detail'
     },
     {
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/BS1.jpg?updatedAt=1763088701893',
       title: 'Bird Control Solutions',
       subtitle: 'Protect Your Property',
       description: 'Effective and humane bird spike solutions for lasting protection'
@@ -30,19 +30,19 @@ const Home = () => {
     {
       name: '25-35mm Grass',
       height: '25-35mm',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/25mm%20AG.webp?updatedAt=1763088898293',
       features: ['3-tone color', 'Monofilament fiber', 'Single & double layer']
     },
     {
       name: '40mm Premium Grass',
       height: '40mm',
-      image: 'https://images.unsplash.com/photo-1574090424863-0dda9e448184?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/40mm%20AG.jpg?updatedAt=1763088974784',
       features: ['Double layer backing', 'High durability', 'Luxury installations']
     },
     {
       name: '50mm Luxury Grass',
       height: '50mm',
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/50mm%20AG.webp?updatedAt=1763088974918',
       features: ['Premium quality', 'FIFA-standard feel', 'Sports & landscapes']
     }
   ]

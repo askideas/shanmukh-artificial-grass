@@ -107,7 +107,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="https://ik.imagekit.io/wlo5q0w8i/Images/AG%20About.jpg?updatedAt=1763089139765"
                 alt="Artificial grass installation"
                 className="rounded-2xl shadow-xl"
               />
@@ -247,7 +247,7 @@ const About = () => {
             
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1574090424863-0dda9e448184?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                src="https://ik.imagekit.io/wlo5q0w8i/Images/AG%20About2.jpg?updatedAt=1763089263930"
                 alt="Our services"
                 className="rounded-2xl shadow-xl"
               />
