@@ -32,7 +32,7 @@ const ArtificialGrass = () => {
       backing: 'Single layer black latex',
       backingType: 'single',
       sizes: ['2 ft × 25 m', '4 ft × 25 m', '1 m × 25 m', '2 m × 25 m'],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/25mm%20AG.webp?updatedAt=1763088898293',
       recommended: 'Decorative & light-use areas'
     },
     {
@@ -43,7 +43,7 @@ const ArtificialGrass = () => {
       backing: 'Double layer black latex',
       backingType: 'double',
       sizes: ['2 ft × 25 m', '4 ft × 25 m', '1 m × 25 m', '2 m × 25 m'],
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/25mm%20AG.webp?updatedAt=1763088898293',
       recommended: 'Residential lawns & gardens',
       popular: true
     },
@@ -55,7 +55,7 @@ const ArtificialGrass = () => {
       backing: 'Single layer black latex',
       backingType: 'single',
       sizes: ['2 ft × 25 m', '4 ft × 25 m', '1 m × 25 m', '2 m × 25 m'],
-      image: 'https://images.unsplash.com/photo-1574090424863-0dda9e448184?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/25mm%20AG.webp?updatedAt=1763088898293',
       recommended: 'Balconies & terraces'
     },
     {
@@ -66,7 +66,7 @@ const ArtificialGrass = () => {
       backing: 'Double layer black latex',
       backingType: 'double',
       sizes: ['2 ft × 25 m', '4 ft × 25 m', '1 m × 25 m', '2 m × 25 m'],
-      image: 'https://images.unsplash.com/photo-1574090424863-0dda9e448184?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/40mm%20AG.jpg?updatedAt=1763088974784',
       recommended: 'High-traffic residential areas',
       popular: true
     },
@@ -78,7 +78,7 @@ const ArtificialGrass = () => {
       backing: 'Double layer black latex',
       backingType: 'double',
       sizes: ['2 ft × 25 m', '4 ft × 25 m', '1 m × 25 m', '2 m × 25 m'],
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/40mm%20AG.jpg?updatedAt=1763088974784',
       recommended: 'Commercial & luxury installations'
     },
     {
@@ -89,7 +89,7 @@ const ArtificialGrass = () => {
       backing: 'Double layer black latex',
       backingType: 'double',
       sizes: ['2 ft × 25 m', '4 ft × 25 m', '1 m × 25 m', '2 m × 25 m'],
-      image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/50mm%20AG.webp?updatedAt=1763088974918',
       recommended: 'Premium sports & luxury landscapes',
       premium: true
     }

@@ -31,7 +31,7 @@ const BirdSpikes = () => {
       installation: 'Glue, screws, nails or cable ties — quick and neat',
       use: 'Ideal for windowsills, parapets, signboards, beams and ledges where aesthetics matter',
       benefits: ['Humane', 'Unobtrusive', 'Long lasting', 'Non-corroding'],
-      image: 'https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/BS3.jpg?updatedAt=1763089726770',
       color: 'blue'
     },
     {
@@ -44,7 +44,7 @@ const BirdSpikes = () => {
       installation: 'Screws or adhesive as appropriate (suitable for industrial & commercial use)',
       use: 'Rooftops, warehouses, chimneys, pipelines, and heavy-use outdoor structures',
       benefits: ['Robust', 'Vandal-resistant', 'Heavy-duty', 'Industrial grade'],
-      image: 'https://images.unsplash.com/photo-1581092787765-e45d8b34bed0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80',
+      image: 'https://ik.imagekit.io/wlo5q0w8i/Images/BS2.webp?updatedAt=1763089628087',
       color: 'green'
     }
   ]
@@ -222,7 +222,7 @@ const BirdSpikes = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {productTypes.map((product, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-48">
+                <div className="relative h-[450px]">
                   <img 
                     src={product.image} 
                     alt={product.name}
@@ -337,7 +337,7 @@ const BirdSpikes = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://ik.imagekit.io/wlo5q0w8i/Images/BS3.jpg?updatedAt=1763089726770"
                 alt="Building applications"
                 className="rounded-xl shadow-lg"
               />
