@@ -20,6 +20,8 @@ import {
   ChevronRight
 } from 'lucide-react'
 
+import Broucher from '../assets/broucher.pdf'
+
 const BirdSpikes = () => {
   const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false)
 
@@ -176,12 +178,12 @@ const BirdSpikes = () => {
                 Get a Quote
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button
+              <a href={Broucher} 
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200 flex items-center justify-center cursor-pointer"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Product Brochure
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -471,9 +473,9 @@ const BirdSpikes = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-gray-600 mb-6">
+            {/* <p className="text-gray-600 mb-6">
               Website: <a href="https://www.ebmpindia.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline cursor-pointer">www.ebmpindia.com</a>
-            </p>
+            </p> */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => setIsQuoteModalOpen(true)}
